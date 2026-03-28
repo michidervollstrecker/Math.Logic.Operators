@@ -50,7 +50,16 @@
             string up = Console.ReadLine();
             string? up2 = up + up;      // Das ? macht, dass es keinen Fehler ausgibt, wenn der Wert nicht korrekt zugewiesen ist.
             Console.WriteLine(up2);
-
+//
+                        string[] countries = { "Germany", "America", "Canada", "Australia", "China", "Chile" };
+            List<string> clist = new List<string>();
+            for (int ix = 0; ix <= countries.Length - 1; ix++)
+            {
+                if (countries[ix]!.StartsWith("C"))
+                {
+                    clist.Add(countries[ix]);
+                    Console.WriteLine(countries[ix]);
+                }
         }
     }
 }
