@@ -4,19 +4,31 @@
     {
         static void Main(string[] args)
         {
-            for (Int16 min16 = Int16.MinValue; min16 < Int16.MaxValue;)
+            Int16 _i16min = Int16.MinValue;
+            while (_i16min < Int16.MaxValue)  // while (_i16min <= Int16.MaxValue) Deadloop
             {
-                min16++;
-                Console.WriteLine(min16);
-                if (min16 == Int16.MaxValue)
+                if (_i16min % 2 == 0)
                 {
-                    Console.WriteLine("int16_Max " + min16);
-
-                    Console.WriteLine(("int16_Max +1 " + min16++));
+                    Console.WriteLine(_i16min + " gerade");
                 }
+                else
+                {
+                    Console.WriteLine(_i16min + " ungerade");
+                }
+                _i16min++;
             }
-            Console.WriteLine(Int16.MaxValue);
-            Console.WriteLine(Int16.MinValue);
+
         }
     }
 }
+
+/* Int16 _i16 = Int16.MaxValue;
+        Console.WriteLine($"int16_max = {_i16}");
+        Console.WriteLine(_i16 % 1);
+        _i16++;
+        Console.WriteLine($"Int16 + 1 = {_i16}");
+        _i16++;
+        Console.WriteLine($"Int16 + 2 = {_i16}");
+        _i16++;
+        Console.WriteLine($"Int16 +3 = {_i16}");
+       */
